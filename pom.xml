@@ -21,7 +21,7 @@
 		<muleVersion>4.3.0</muleVersion>
 
 		<applicationName>rtf-test</applicationName>
-		<environment>Dev</environment>
+<!-- 		<environment>Dev</environment> -->
 		<provider>MC</provider>
 		<target>my-fabric</target>
 
