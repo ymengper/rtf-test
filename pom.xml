@@ -6,7 +6,7 @@
 
 	<groupId>23a3a92a-57cc-4a31-8f62-180c8d4195ad</groupId>
 	<artifactId>rtf-test</artifactId>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.7-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>rtf-test</name>
@@ -51,7 +51,7 @@
 						<!-- <password>${password}</password> -->
 
 						<server>anypoint-exchange-v2</server>
-						<applicationName>${runtime.fabric.application.name}</applicationName>
+						<applicationName>${runtime.fabric.application.name}-${environment}</applicationName>
 						<environment>${environment}</environment>
 						<provider>${provider}</provider>
 						<target>${target}</target>
@@ -72,6 +72,7 @@
 							<memoryMax>999Mi</memoryMax>
 							<replicationFactor>2</replicationFactor>
 							<!-- <publicUrl>https://${name}.handsonlab.pro</publicUrl> -->
+						  
 						</deploymentSettings>
 
 
