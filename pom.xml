@@ -6,7 +6,7 @@
 
 	<groupId>23a3a92a-57cc-4a31-8f62-180c8d4195ad</groupId>
 	<artifactId>rtf-test</artifactId>
-	<version>1.0.5-SNAPSHOT</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>rtf-test</name>
