@@ -7,9 +7,10 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2866d686-d0b2-4ef1-8a6e-7942b1b6cb83" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
+	<global-property doc:name="Global Property" doc:id="03960edd-9637-4138-b379-9071e13f5382" name="mule.env" value="Dev" />
 	<flow name="rtf-testFlow" doc:id="b13b58e9-d895-4687-aa50-84351284e4dd" >
 		<http:listener doc:name="Listener" doc:id="285642ad-bd8f-458d-a4fc-fa13672a7c5d" config-ref="HTTP_Listener_config" path="/rtf/test"/>
-		<set-payload value="#['Hello, this is a RTF test.']" doc:name="Set Payload" doc:id="92c3f112-0f88-441b-a6c4-6611aeeb2842" />
+		<set-payload value="#['Hello, this is a RTF test from ' ++ p('mule.env') ++ ' environment!!!']" doc:name="Set Payload" doc:id="92c3f112-0f88-441b-a6c4-6611aeeb2842" />
 		<logger level="INFO" doc:name="Logger" doc:id="84b39b8b-32a8-4777-bcc3-d8a0339001f9" message="#[payload]"/>
 	</flow>
 </mule>
